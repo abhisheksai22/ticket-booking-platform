@@ -1,1 +1,1 @@
-# ticket-booking-platform
+# Ticket-Booking-Platform

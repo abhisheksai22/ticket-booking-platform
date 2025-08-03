@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: THEATRE-SERVICE
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/theatres_db
+    username: postgres
+    password: 7737262
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  redis:
+    host: localhost
+    port: 6379
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+springdoc:
+  enabled: true
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+#  use-management-port: true
+
+server:
+  port: 7200
+#  servlet:
+#    context-path: /api/
